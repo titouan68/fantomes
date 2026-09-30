@@ -1,4 +1,12 @@
+'use client';
+
 export default function Home() {
+  const handleClick = async () => {
+    const res = await fetch('/api/checkout', { method: 'POST' });
+    const data = await res.json();
+    window.location.href = data.url;
+  };
+
   return (
     <main className="min-h-screen bg-[#14171F] text-[#F5F3ED] flex flex-col items-center justify-center px-6 py-12 text-center">
       <p className="uppercase tracking-widest text-xs text-[#1F7A5C] font-semibold mb-4">
@@ -26,7 +34,10 @@ export default function Home() {
         </div>
       </div>
 
-      <button className="mt-10 w-full max-w-sm bg-[#1F7A5C] text-[#F5F3ED] font-semibold py-4 rounded-xl text-lg active:scale-[0.98] transition">
+      <button
+        onClick={handleClick}
+        className="mt-10 w-full max-w-sm bg-[#1F7A5C] text-[#F5F3ED] font-semibold py-4 rounded-xl text-lg active:scale-[0.98] transition"
+      >
         Débusquer mes fantômes — 19€
       </button>
 
