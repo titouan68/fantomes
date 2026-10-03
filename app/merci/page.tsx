@@ -8,8 +8,15 @@ export default function Merci() {
         Paiement reçu, merci !
       </h1>
       <p className="mt-6 text-lg text-[#F5F3ED]/80 max-w-sm">
-        On te contacte très vite pour récupérer ton relevé et démarrer l'audit.
+        Dépose ton relevé bancaire ci-dessous pour voir tes fantômes.
       </p>
+
+      <a
+        href="/outil"
+        className="mt-10 w-full max-w-sm bg-[#1F7A5C] text-[#F5F3ED] font-semibold py-4 rounded-xl text-lg active:scale-[0.98] transition inline-block"
+      >
+        Accéder à mon audit
+      </a>
     </main>
   );
 }
