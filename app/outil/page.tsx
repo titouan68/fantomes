@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Footer from '../components/Footer';
 
 type Transaction = {
   date: string;
@@ -184,7 +185,8 @@ export default function Outil() {
             </div>
           </>
         )}
-      </div>
+           </div>
+      <Footer />
     </main>
   );
 }
